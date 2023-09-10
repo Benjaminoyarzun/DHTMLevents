@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click event</title>
+</head>
+<body>
+        <a href="#" id="enlace">Haz clic aquí</a>
+
+    <script>
+      
+        const enlace = document.getElementById("enlace");
+
+        
+        enlace.addEventListener("click", function(event) {
+            // Evita que el enlace siga el URL
+            event.preventDefault();
+
+           
+            alert("Gracias por visitar esta web!!");
+        });
+    </script>
+    
+</body>
+</html>

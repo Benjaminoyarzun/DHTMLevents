@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event mouse up-down</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Marca 1</td>
+            <td>Marca 2</td>
+            <td>Marca 3</td>
+            <td>Marca 4</td>
+            <td>Marca 5</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        const celdas = document.getElementsByTagName("td");
+
+        
+        for (let i = 0; i < celdas.length; i++) {
+            celdas[i].addEventListener("click", function() {
+                alert("Hiciste clic en la marca " + (i + 1));
+            });
+        }
+    </script>
+</body>
+</html>

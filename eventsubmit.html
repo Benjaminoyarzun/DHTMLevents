@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit event</title>
+</head>
+<body>
+    <form id="formulario" action="tu_servidor.php" method="post">
+        <label for="clave1">Clave:</label>
+        <input type="password" id="clave1" name="clave1" required>
+        <br>
+        <label for="clave2">Confirmar Clave:</label>
+        <input type="password" id="clave2" name="clave2" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        const clave1 = document.getElementById("clave1");
+        const clave2 = document.getElementById("clave2");
+
+        formulario.addEventListener("submit", function(event) {
+            if (clave1.value !== clave2.value) {
+                alert("Las claves ingresadas no coinciden. Por favor, inténtelo de nuevo.");
+                event.preventDefault(); // Evita que se envíe el formulario al servidor
+            }
+        });
+    </script>
+</body>
+</html>

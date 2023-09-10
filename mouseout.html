@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event mouseout</title>
+</head>
+<body>
+    <h1 id="titulo">Título</h1>
+
+    <script>
+        const titulo = document.getElementById("titulo");
+
+        titulo.addEventListener("mousemove", function(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+
+            document.title = `Coordenadas del Mouse: X=${x}, Y=${y}`;
+        });
+
+        titulo.addEventListener("mouseout", function() {
+            document.title = "Coordenadas del Mouse";
+        });
+    </script>
+</body>
+</html>

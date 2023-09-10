@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events blur and focus</title>
+    <style>
+        .blue {
+            color: blue; /* Color azul para la fuente por defecto */
+        }
+
+        .red {
+            color: red; /* Cambiar a color rojo cuando el control obtiene foco */
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="control1" class="blue" value="Contenido 1">
+    <br>
+    <input type="text" id="control2" class="blue" value="Contenido 2">
+
+    <script>
+        const control1 = document.getElementById("control1");
+        const control2 = document.getElementById("control2");
+
+        control1.addEventListener("focus", function() {
+            control1.classList.remove("blue");
+            control1.classList.add("red");
+        });
+
+        control1.addEventListener("blur", function() {
+            control1.classList.remove("red");
+            control1.classList.add("blue");
+        });
+
+        control2.addEventListener("focus", function() {
+            control2.classList.remove("blue");
+            control2.classList.add("red");
+        });
+
+        control2.addEventListener("blur", function() {
+            control2.classList.remove("red");
+            control2.classList.add("blue");
+        });
+    </script>
+</body>
+</html>
