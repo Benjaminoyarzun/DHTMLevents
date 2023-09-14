@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eventos y Cambio de Fondo</title>
+</head>
+<body>
+    <button id="boton1">Botón 1</button>
+    <button id="boton2">Botón 2</button>
+    <button id="boton3">Botón 3</button>
+
+    <script>
+        function mostrarMensaje(event) {
+            alert("Botón presionado: " + event.target.textContent);
+        }
+
+        function cambiarFondo() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+        document.getElementById("boton1").addEventListener("click", mostrarMensaje, false);
+        document.getElementById("boton2").addEventListener("click", mostrarMensaje, false);
+        document.getElementById("boton3").addEventListener("click", mostrarMensaje, false);
+
+        document.addEventListener("click", cambiarFondo, false);
+    </script>
+</body>
+</html>

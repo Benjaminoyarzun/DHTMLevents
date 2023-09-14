@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mover un Div con el Mouse</title>
+    <style>
+        #miDiv {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="miDiv"></div>
+
+    <script>
+        var div = document.getElementById('miDiv');
+        var isDragging = false;
+
+        div.addEventListener('mousedown', function (e) {
+            isDragging = true;
+            var offsetX = e.clientX - div.getBoundingClientRect().left;
+            var offsetY = e.clientY - div.getBoundingClientRect().top;
+
+
+            window.addEventListener('mousemove', function (e) {
+                if (isDragging) {
+                    var x = e.clientX - offsetX;
+                    var y = e.clientY - offsetY;
+                    div.style.left = x + 'px';
+                    div.style.top = y + 'px';
+                }
+            });
+
+            window.addEventListener('mouseup', function () {
+                isDragging = false;
+                window.removeEventListener('mousemove', null);
+                window.removeEventListener('mouseup', null);
+            });
+        });
+    </script>
+</body>
+</html>
