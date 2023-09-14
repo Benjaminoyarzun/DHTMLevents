@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambiar Color de Botones</title>
+</head>
+<body>
+
+<button id="boton1" onclick="cambiarColor('boton1', 'green')">Botón 1</button>
+<button id="boton2" onclick="cambiarColor('boton2', 'red')">Botón 2</button>
+<button id="boton3" onclick="cambiarColor('boton3', 'blue')">Botón 3</button>
+
+<script>
+function cambiarColor(idBoton, color) {
+    var boton = document.getElementById(idBoton);
+    
+    
+    boton.style.backgroundColor = color;
+}
+</script>
+
+</body>
+</html>

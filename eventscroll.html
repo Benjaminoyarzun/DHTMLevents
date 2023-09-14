@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Div Fijo en la Parte Superior Izquierda con Scroll</title>
+    <style>
+        #miDiv {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="miDiv">Este es un div fijo en la parte superior izquierda</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse finibus turpis elit, ut posuere quam venenatis non. Aliquam non consequat nulla, ac scelerisque felis. Donec scelerisque, libero vel porta pretium, nisl enim vestibulum justo, non varius purus mauris a nibh. In pulvinar consequat orci, id suscipit nunc condimentum at. Nunc justo erat, tristique in consequat ut, tempus non lorem. Sed turpis turpis, molestie ut tincidunt scelerisque, dictum eget neque. Nullam ut porta nisl. Mauris mattis ornare velit eget volutpat. Nunc accumsan mi a vulputate interdum. Quisque massa nulla, vehicula ac placerat ac, tincidunt tempor neque. Vivamus diam ligula, laoreet luctus nulla non, feugiat viverra dui. Proin laoreet lobortis sem sed congue. Nulla id sem viverra, condimentum ipsum sit amet, dignissim mi. Suspendisse potenti. Praesent tempus, dui a finibus auctor, nulla lorem luctus sem, rutrum dictum nulla eros sit amet lacus. Vivamus ultrices viverra dolor, eu lobortis enim eleifend vel.
+
+        Morbi scelerisque ipsum id metus condimentum sodales. In fermentum id lacus vel faucibus. Mauris iaculis tristique diam at finibus. Donec non condimentum erat. Ut consectetur condimentum nulla, eget tristique enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tincidunt hendrerit ex, ut feugiat leo cursus at. In euismod nunc vitae volutpat convallis. Phasellus nec facilisis libero, id vulputate ante. Ut quis dignissim ligula. Quisque convallis erat sit amet varius consectetur. Vestibulum arcu est, sollicitudin vitae elementum a, pellentesque ut est. Donec pretium aliquet pulvinar. Ut sem metus, pharetra eu turpis ut, laoreet auctor neque. Nulla scelerisque magna ac imperdiet placerat.
+        
+        Ut vestibulum dui eget metus auctor porttitor. Donec ante urna, fermentum in placerat at, interdum vitae tortor. Mauris scelerisque maximus neque in eleifend. Praesent at mauris ullamcorper, consequat magna eu, ultricies diam. Phasellus vitae pellentesque neque. Vestibulum nulla justo, fermentum iaculis consequat quis, efficitur ac nunc. Nulla facilisi. Aenean est libero, dapibus eu lobortis at, suscipit vitae turpis.
+        
+        Aliquam scelerisque maximus augue, a tincidunt orci commodo interdum. Nullam ultricies urna et urna malesuada consequat. Quisque et auctor elit, ac dignissim turpis. Maecenas sit amet pellentesque urna, et tincidunt mauris. Ut ultrices dapibus ornare. Sed elementum tellus ut mi efficitur, at molestie massa finibus. Aliquam eu odio nisi. Sed sodales purus purus, vel egestas enim hendrerit in. Phasellus non tempor nibh, eget fermentum neque. Etiam id mauris fringilla, lacinia augue et, imperdiet nisi. Aliquam vitae urna a magna efficitur elementum. Fusce eget libero mauris. Suspendisse nec mi eget leo venenatis maximus non nec dui.
+        
+        Proin arcu justo, pretium ac molestie nec, pulvinar eu tellus. Sed quis diam ut sem ornare pretium. Donec placerat, lectus sed maximus posuere, diam lorem suscipit arcu, ornare maximus urna tellus et erat. Sed nec nisi quam. Aenean vitae ligula consectetur, tempus lorem eu, consectetur nulla. Nullam quis aliquam libero. Sed fermentum, enim vitae blandit volutpat, tellus dolor tempor ante, ac laoreet enim ligula a erat. In vehicula consectetur eros. Sed ut ipsum sagittis, luctus arcu ut, semper magna. Suspendisse potenti. Cras feugiat ex ac massa aliquet imperdiet. Pellentesque tincidunt risus nec rhoncus interdum.
+        
+        Vestibulum varius ultrices felis blandit pellentesque. Mauris vulputate, velit sit amet facilisis vestibulum, odio sem lacinia ex, a tempus orci tortor nec urna. Nunc tincidunt leo eget ligula pellentesque, sed aliquet lorem lobortis. Maecenas ultricies pharetra sollicitudin. Mauris consequat convallis purus, eget aliquam ipsum placerat vel. Maecenas eget nunc id felis mollis ullamcorper vel at elit. Nulla auctor in ligula ac mollis. Nam tincidunt efficitur facilisis. Sed dignissim, mauris a eleifend dapibus, lacus arcu rutrum eros, sit amet interdum augue dolor eu dolor. In magna velit, accumsan faucibus dictum at, interdum eu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh eros, pellentesque nec ex at, malesuada venenatis purus.</p>
+    <div style="height: 1000px;"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var div = document.getElementById('miDiv');
+            div.style.top = window.scrollY + 'px';
+        });
+    </script>
+</body>
+</html>

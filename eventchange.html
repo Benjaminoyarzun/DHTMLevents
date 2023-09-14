@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleccionar Valor</title>
+</head>
+<body>
+
+<select id="miSelect" onchange="mostrarValorSeleccionado()">
+    <option value="opcion1">Opción 1</option>
+    <option value="opcion2">Opción 2</option>
+    <option value="opcion3">Opción 3</option>
+</select>
+
+<script>
+function mostrarValorSeleccionado() {
+    
+    var select = document.getElementById("miSelect");
+
+    
+    var valorSeleccionado = select.value;
+
+  
+    alert("Valor seleccionado: " + valorSeleccionado);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Tecla Presionada</title>
+</head>
+<body>
+
+<textarea id="miTextarea" onkeydown="mostrarTeclaPresionada(event)"></textarea>
+
+<script>
+function mostrarTeclaPresionada(event) {
+   
+    var caracter = event.key;
+
+   
+    alert("Tecla presionada: " + caracter);
+}
+</script>
+
+</body>
+</html>
